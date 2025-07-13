@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Great Events</title>
+  <style>
+    body {
+      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+      margin: 0;
+      color: #0d1520;
+      background: #fff;
+    }
+
+    :root {
+      --azul-claro: #1277a2;
+      --azul-escuro: #003e65;
+    }
+
+    .btn {
+      padding: 0.9rem 2.2rem;
+      border-radius: 0.4rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--azul-claro);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--azul-escuro);
+    }
+
+    .btn-secondary {
+      background: var(--azul-escuro);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #001f3d;
+    }
+/* HERO MODERNO */
+header.hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #3db2ff 0%, #176cae 100%), url("img/1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+header.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 34, 61, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+.insta-carousel img {
+  min-width: 100%;
+  max-width: 100%;
+  height: 480px; /* Aumente aqui para o valor desejado */
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(18,119,162,0.10);
+  border: 2px solid #e3f0fa;
+  background: #fff;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .insta-carousel img {
+    height: 220px; /* Também aumente aqui se quiser no mobile */
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.10);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.hero-logo {
+  width: 110px;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+  border: 3px solid #fff;
+  background: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: -1.rem;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.hero h1 .highlight {
+  color: #ffe066;
+  background: linear-gradient(90deg, #ffe066 60%, #fffbe6 100%);
+  padding: 0 0.3em;
+  border-radius: 0.3em;
+  box-decoration-break: clone;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #e3e3e3;
+  margin-bottom: 2.2rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.12);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #6669ff 0%, #2512a2d3 100%);
+  color: #d7e4ec;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 2px 16px #1277a255;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(90deg, #8a66ff 10%, #3812a2 90%);
+}
+
+@media (max-width: 700px) {
+  .hero-content {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero-logo {
+    width: 80px;
+  }
+}
+section.video {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: linear-gradient(120deg, #f8fafc 0%, #e3f0fa 100%);
+  position: relative;
+}
+
+.video-card {
+  display: inline-block;
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 2rem auto;
+  max-width: 850px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.video-card:hover {
+  box-shadow: 0 16px 48px 0 rgba(18,119,162,0.18);
+  transform: translateY(-4px) scale(1.01);
+}
+
+section.video h2 {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  color: #1277a2;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 16px #1277a2;
+}
+
+section.video video {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(18,119,162,0.10);
+  border: 2px solid #e3f0fa;
+  background: #fff;
+}
+
+section#portfolio {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  background: linear-gradient(120deg, #e3f0fa 0%, #f8fafc 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(18,119,162,0.08);
+}
+
+section#portfolio h2 {
+  color: #003e65;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+  text-align: center;
+}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    /* Instagram Carrossel */
+    .insta-carousel-wrapper {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      overflow: hidden;
+      border-radius: 1rem;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      position: relative;
+    }
+
+    .insta-carousel {
+      display: flex;
+      transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+      will-change: transform;
+    }
+
+    .insta-carousel blockquote {
+      min-width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      margin: 0;
+      border-radius: 1rem;
+      background: #fff;
+      /* Mantém o estilo do Instagram */
+      background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px rgba(0,0,0,0.5),0 1px 10px rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px);
+    }
+
+    .instagram-embeds {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .footer {
+  background: linear-gradient(90deg, #003e65 0%, #1277a2 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1rem 1.2rem 1rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  box-shadow: 0 -2px 24px rgba(18,119,162,0.10);
+      margin-top: 3rem;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-icon {
+      font-size: 2.2rem;
+      transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    }
+
+    .footer-icon.whatsapp { color: #25D366; }
+    .footer-icon.instagram { color: #E4405F; }
+
+    .footer-icon:hover {
+      background: #fff;
+      transform: scale(1.13) translateY(-3px);
+      box-shadow: 0 4px 16px #1277a255;
+      color: #003e65;
+    }
+
+    .footer-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #ffe066 0%, #1277a2 100%);
+      border-radius: 2px;
+      margin: 0 auto 1.2rem auto;
+      opacity: 0.7;
+    }
+    .footer-icon {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    }
+    .footer-icon:visited,
+    .footer-icon:active,
+    .footer-icon:focus,
+    .footer-icon:hover {
+      text-decoration: none !important;
+      border-bottom: none !important;
+      outline: none;
+    }
+
+    .footer-copy {
+      font-size: 1rem;
+      color: #e3e3e3;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .footer {
+        padding: 2rem 0.5rem 1rem 0.5rem;
+        border-radius: 1rem 1rem 0 0;
+      }
+      .footer-icon {
+        font-size: 1.5rem;
+        width: 38px;
+        height: 38px;
+      }
+      .footer-divider {
+        width: 40px;
+        height: 2px;
+      }
+      .footer-copy {
+        font-size: 0.95rem;
+      }
+}
+.insta-carousel img {
+  min-width: 100%;
+  max-width: 100%;
+  height: 670px;
+  object-fit: cover;
+  object-position: center; /* <-- Adicione esta linha */
+
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(18,119,162,0.10);
+  border: 2px solid #e3f0fa;
+  background: #fff;
+  margin: 0;
+}
+@media (max-width: 500px) {
+  .insta-carousel img {
+    height: 300px;
+    object-position: center; /* Garante centralização também no mobile */
+
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="img/1.jpg" alt="Logotipo For Great Events" class="hero-logo" />
+      <h1>Transformamos eventos em experiências inesquecíveis</h1>
+      <p>Eventos 360°</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap: wrap;">
+        <a href="#portfolio" class="btn btn-secondary">Ver Portfólio</a>
+        <a href="https://wa.me/351926389247?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20evento." target="_blank" class="btn btn-primary">
+          Pedir Orçamento
+        </a>      </div>
+    </div>
+  </header>
+
+  <!-- VÍDEO DOS 10 ANOS -->
+  <section class="video" id="sobre">
+    <h2>Somos especialistas em produção de eventos</h2>
+    <p>Transformando ideias em experiências memoráveis. <br> Seja um evento corporativo, uma ativação de marca ou uma outra produção, estamos aqui para fazer acontecer! <br> <br>
+🔹<strong>Event Solutions 360</strong>  <br>
+🔹<strong>O teu parceiro para eventos de impacto</strong> <br>
+🔹<strong>Criatividade, tecnologia e execução excepcional</strong></p>
+    <video src="video/video-dono.MOV" controls poster="logoprincipal.jpeg"></video>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio">
+    <h2>Trabalhos Recentes</h2>
+    <div class="insta-carousel-wrapper">
+      <div class="insta-carousel" id="insta-carousel">
+      <img src="trabalho1.jpeg" alt="Trabalho 1">
+      <img src="trabalho2.jpeg" alt="Trabalho 2">
+      <img src="trabalho3.jpeg" alt="Trabalho 3">
+      <img src="trabalho4.jpeg" alt="Trabalho 4">
+      <img src="trabalho5.jpeg" alt="Trabalho 5">
+      <img src="trabalho6.jpeg" alt="Trabalho 6">
+      <img src="trabalho7.jpeg" alt="Trabalho 7">
+      <img src="trabalho8.jpeg" alt="Trabalho 8">
+      <img src="trabalho9.jpeg" alt="Trabalho 9">
+      <img src="trabalho10.jpeg" alt="Trabalho 10">
+      <img src="trabalho11.jpeg" alt="Trabalho 11">
+      <img src="trabalho12.jpeg" alt="Trabalho 12">
+      </div>
+    </div>
+    <!-- Se quiser manter a grid antiga, basta não remover a div abaixo -->
+    <!--
+    <div class="instagram-embeds">
+      ... seus blockquotes antigos ...
+    </div>
+    -->
+  </section>
+
+  <!-- RODAPÉ -->
+<footer class="footer">
+  <div class="footer-social">
+    <a href="https://wa.me/351926389247" target="_blank" aria-label="WhatsApp" class="footer-icon whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" aria-label="Instagram" class="footer-icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  <div class="footer-divider"></div>
+  <p class="footer-copy">&copy; 2025 For Great Events. Todos os direitos reservados.</p>
+</footer>
+
+  <!-- Carrossel Instagram -->
+ <script>
+  const instaCarousel = document.getElementById('insta-carousel');
+  const instaSlides = instaCarousel.querySelectorAll('img');
+  let instaCurrent = 0;
+
+  function showInstaSlide(idx) {
+    instaCarousel.style.transform = `translateX(-${idx * 100}%)`;
+    instaCurrent = idx;
+  }
+
+  function nextInstaSlide() {
+    let next = (instaCurrent + 1) % instaSlides.length;
+    showInstaSlide(next);
+  }
+
+  setInterval(nextInstaSlide, 3500);
+  showInstaSlide(0);
+</script>
+
+</body>
+
+</html>
